@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+
+}
+
+body, button, input {
+    font-family: 'DM Sans', sans-serif;
+}
+
+main {
+    background: #FFF;
+    box-shadow: 0 2rem 5rem  rgba(0, 0, 0, 0.80);
+    border-radius: .5rem;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+
+    width: min(42.8rem, 90%);    
+
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+button  {
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #FFF;
+    border-radius:.4rem;
+    border: none;
+    cursor: pointer;
+
+}
+
+.hide {
+    display: none;
+}
+
+/* page1*/
+h1 {
+    margin-bottom: 1.4rem;
+}
+
+h1, h2, p {
+    color: #34355B;
+}
+
+.page1 p {
+    margin-bottom: 2.7rem;
+}
+
+.page1 button {
+    display: grid;
+}
+
+.page1 button img:hover {
+    animation: shake 0.2s;
+    animation-iteration-count: infinite;
+}
+
+/*page2*/
+
+h2 {
+    margin-bottom: 1.7rem;
+}
+
+.sliding {   
+    height: 10.7rem;
+    display: flex;
+    justify-content: center;
+
+    margin: 1.7rem 0 1.7rem 0;
+    
+}
+
+.page2 p {
+    color: #000;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    font-size: 2.4rem;
+
+    padding: 1rem;
+    background: #E4EDF1;
+    box-shadow: .2rem .2rem .2rem 0rem rgba(85, 85, 85, 0.50);
+    
+    animation: slidein 3s;
+}
+
+.page2 img {
+    padding: 4.2rem 0 4.2rem 0;
+}
+
+.page2 button {
+    margin-top: 1.7rem;
+    padding: 1.6rem;
+    color: #FFF;
+    background: #FF9500;
+}
+
+button {
+    transition: background .6s;
+}
+
+.page2 button:hover {
+    background: #bc6d00;
+}
+
+
+@keyframes shake {
+    0% {transform: rotate(0);
+        margin-left: 0;
+    }
+    25% {transform: rotate(2deg);
+        margin-left: 0.5rem;
+    }
+    50% {transform: rotate(-2deg);
+        margin-left: 0;
+    }
+    75% {transform: rotate(2deg);
+        margin-left: -0,5rem;
+    }
+    100% {transform: rotate(0);
+        margin-left: 0;
+    }
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(25vh);
+        font-size: min(55%);
+        width: 40%;
+        height: min-content;
+    }
+
+    to {
+        transform: translateY(0);
+        width: 100%;
+        height: max-content;
+    }
+}
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }    
+}
